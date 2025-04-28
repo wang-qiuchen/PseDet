@@ -16,4 +16,4 @@
 
 ## News
 
-The code will be released before 26th April.
+The code will be released before 5.15.
