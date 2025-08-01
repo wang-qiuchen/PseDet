@@ -27,13 +27,13 @@ Before you begin, ensure you have the following prerequisites installed on your 
 
 ### Two Stage Scenarios
 
-> 1.Train the initial model using the provided script:
+> **1.Train the initial model using the provided script:**
 
 ```bash
 ./tools/dist_train.sh ./coco_cfg/train_stage_init/gfl_r50_1x_s0_40cls.py $nums_gpu
 ```
 
->2.Infer Pseudo-Labels
+> **2.Infer Pseudo-Labels**
 
 Generate pseudo-labels for the first stage:
 
@@ -41,7 +41,7 @@ Generate pseudo-labels for the first stage:
 ./tools/dist_test.sh ./coco_cfg/generate_pseudo/gfl_infer_classes_40.py $checkpoint_path $nums_gpu --tta
 ```
 
->3.Second Stage (40+40 cls)
+> **3.Second Stage (40+40 cls)**
 
 Train the model on the second stage with pseudo-labels:
 
@@ -51,21 +51,21 @@ Train the model on the second stage with pseudo-labels:
 
 ### Multi Stage Scenarios
 
-> 1.Train the initial model (40 cls) and Infer Pseudo-Labels
+> **1.Train the initial model (40 cls) and Infer Pseudo-Labels**
 
 ```bash
 ./tools/dist_train.sh ./coco_cfg/train_stage_init/gfl_r50_1x_s0_40cls.py $nums_gpu
 ./tools/dist_test.sh ./coco_cfg/generate_pseudo/gfl_infer_classes_40.py $checkpoint_path $nums_gpu --tta
 ```
 
->2.Train Second Stage (40+20 cls) and Infer Pseudo-Labels
+> **2.Train Second Stage (40+20 cls) and Infer Pseudo-Labels**
 
 ```bash
 ./tools/dist_test.sh ./coco_cfg/train_stage_40_20_20/gfl_r50_1x_422_s1_60cls.py $nums_gpu
 ./tools/dist_test.sh ./coco_cfg/generate_pseudo/gfl_infer_classes_40.py $checkpoint_path $nums_gpu --tta
 ```
 
->3.Train Third Stage (40+20+20 cls)
+> **3.Train Third Stage (40+20+20 cls)**
 ```bash
 ./tools/dist_test.sh ./coco_cfg/train_stage_40_20_20/gfl_r50_1x_422_s2_80cls.py $nums_gpu
 ```
