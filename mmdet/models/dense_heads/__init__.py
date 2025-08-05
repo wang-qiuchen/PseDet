@@ -49,11 +49,7 @@ from .yolact_head import YOLACTHead, YOLACTProtonet
 from .yolo_head import YOLOV3Head
 from .yolof_head import YOLOFHead
 from .yolox_head import YOLOXHead
-from .atss_erd_head import ATSSERDHead
-from .atss_sdm_head import ATSSSDMHead
-from .atss_erd_sdm_head import ATSS_ERD_SDMHead
-from .atss_sdm_head_v2 import ATSSSDMHeadV2
-from .atss_sdm_head_v3 import ATSSSDMHeadV3
+
 
 from .gfl_head_pseudo_dynamic import GFLHeadPseudoDynamic
 

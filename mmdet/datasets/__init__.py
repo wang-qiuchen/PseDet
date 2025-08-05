@@ -15,7 +15,6 @@ from .utils import get_loading_pipeline
 from .voc import VOCDataset
 from .wider_face import WIDERFaceDataset
 from .xml_style import XMLDataset
-from .coco_cl import CocoDatasetCL
 from .coco_cl_multi_stage import CocoDatasetCLMultiStage
 
 __all__ = [
@@ -25,5 +24,5 @@ __all__ = [
     'MultiImageMixDataset', 'OpenImagesDataset', 'OpenImagesChallengeDataset',
     'AspectRatioBatchSampler', 'ClassAwareSampler', 'MultiSourceSampler',
     'GroupMultiSourceSampler', 'BaseDetDataset', 'CrowdHumanDataset',
-    'Objects365V1Dataset', 'Objects365V2Dataset','CocoDatasetCL','CocoDatasetCLMultiStage'
+    'Objects365V1Dataset', 'Objects365V2Dataset','CocoDatasetCLMultiStage'
 ]
