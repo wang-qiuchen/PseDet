@@ -46,7 +46,7 @@ Generate pseudo-labels for the first stage:
 Train the model on the second stage with pseudo-labels:
 
 ```bash
-./tools/dist_test.sh ./coco_cfg/train_stage_40_40/gfl_r50_1x_44_s1_80cls.py $nums_gpu
+./tools/dist_train.sh ./coco_cfg/train_stage_40_40/gfl_r50_1x_44_s1_80cls.py $nums_gpu
 ```
 
 ### Multi Stage Scenarios
